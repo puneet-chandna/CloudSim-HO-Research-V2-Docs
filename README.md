@@ -1,7 +1,7 @@
 <div align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="logo/dark.svg">
-    <img alt="CloudSim HO Research V2 Logo" src="logo/dark.svg" width="200" height="auto" style="max-width: 100%;">
+    <img alt="CloudSim HO Research V2 Logo" src="logo/dark.svg" width="400" height="auto" style="max-width: 100%;">
   </picture>
 
   <h1>CloudSim HO Research V2</h1>
