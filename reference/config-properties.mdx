@@ -1,0 +1,28 @@
+---
+
+- `memory.max.heap.gb`: Maximum heap size for the JVM.
+- `memory.batch.processing.enabled`: Enables processing VMs in batches to conserve memory.
+
+### Scenario Definitions
+
+These properties define the scale of the simulation scenarios.
+
+- `scenarios.enabled`: A comma-separated list of scenarios to run (e.g., `Micro,Small,Medium`).
+- `scenario.*.vms`: The number of Virtual Machines for a given scenario (e.g., `scenario.micro.vms`).
+- `scenario.*.hosts`: The number of hosts for a given scenario (e.g., `scenario.micro.hosts`).
+
+> **Note:** The `Large` and `XLarge` scenarios are disabled by default for stability but can be enabled by uncommenting them and adding them to the `scenarios.enabled` list.
+
+### Output Configuration
+
+These settings control how the simulation results are saved.
+
+- `output.base.directory`: The directory where the results will be saved.
+- `output.csv.delimiter`: The delimiter to use for CSV files.
+
+### Host and VM Configuration
+
+These properties define the characteristics of the simulated hardware.
+
+- `host.*`: Defines the properties of the host machines (e.g., `host.mips`, `host.ram`).
+- `vm.*`: Defines the properties of the virtual machines (e.g., `vm.mips.min`, `vm.ram.max`).

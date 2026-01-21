@@ -1,0 +1,82 @@
+---
+title: Running a Simulation
+description: Learn how to setup, build, and run your first Hippopotamus Optimization simulation.
+---
+
+This guide will walk you through the process of setting up the CloudSim-HO-Research-V2 environment, running a simulation, and analyzing the results.
+
+## Prerequisites
+
+Before you begin, ensure you have the following installed:
+
+- **Java Development Kit (JDK) 11** or higher.
+- **Maven 3.6+** for building the project.
+- **Git** for version control.
+
+## 1. Clone the Repository
+
+Start by cloning the research framework to your local machine.
+
+```bash
+git clone https://github.com/puneet-chandna/cloudsim-ho-research-V2.git
+cd cloudsim-ho-research-V2
+```
+
+## 2. Build the Project
+
+Use Maven to clean and build the project. This will download all necessary CloudSim Plus dependencies and compile the Hippopotamus Optimization algorithm.
+
+```bash
+mvn clean install
+```
+
+<Tip>
+  If you encounter dependency issues, try running `mvn clean install -U` to
+  force an update of snapshots.
+</Tip>
+
+## 3. Run the Experiment
+
+You can run the full experimental suite using the provided scripts. These scripts automatically handle classpath configuration and execution.
+
+<CodeGroup>
+```bash Bash (Linux/macOS)
+./run-experiment.sh
+```
+
+```powershell PowerShell (Windows)
+./run-experiment.ps1
+```
+
+</CodeGroup>
+
+### What happens when you run this?
+
+1.  **Configuration Loading**: The system reads `src/main/resources/Config.properties`.
+2.  **Scenario Generation**: It creates VM and Host lists based on the defined scenarios (Micro, Small, Medium).
+3.  **Optimization**: The `HippopotamusOptimization` algorithm iteratively searches for the best VM-to-Host mapping.
+4.  **Simulation**: CloudSim Plus simulates the execution of Cloudlets on the placed VMs.
+
+## 4. Analyze Results
+
+Once the simulation completes, results are generated in the `results` directory.
+
+| File                | Description                                                |
+| :------------------ | :--------------------------------------------------------- |
+| `execution_log.csv` | detailed logs of every simulation step.                    |
+| `scenarios/*`       | Specific metrics for each scenario (Latency, Power, Cost). |
+| `convergence.csv`   | Tracks the fitness score over optimization iterations.     |
+
+### Understanding the Output
+
+The console output provides real-time feedback on the optimization progress:
+
+```text
+[INFO] Starting HO optimization for 100 VMs and 20 hosts...
+[INFO] Iteration 0: Best fitness = 0.8543
+...
+[INFO] Iteration 100: Best fitness = 0.1234
+[INFO] Optimization completed.
+```
+
+A lower fitness score indicates a better balance of resource utilization, power consumption, and SLA adherence.

@@ -14,57 +14,41 @@
         "tab": "Documentation",
         "groups": [
           {
-            "group": "Getting Started",
+            "group": "Tutorials",
             "pages": [
-              "introduction",
-              "getting-started/prerequisites",
-              "getting-started/installation",
-              "getting-started/running-a-simulation"
+              "tutorials/running-first-simulation"
             ]
           },
           {
-            "group": "Core Concepts",
+            "group": "How-to Guides",
             "pages": [
-              "core-concepts/project-structure",
-              "core-concepts/architecture",
-              "core-concepts/hippopotamus-optimization",
-              "core-concepts/app-java",
-              "core-concepts/cloudsim-plus"
+              "guides/installation",
+              "guides/prerequisites",
+              "guides/basic-scenarios",
+              "guides/advanced-scenarios",
+              "guides/unit-tests",
+              "guides/running-tests",
+              "guides/building-from-source",
+              "guides/contributing"
             ]
           },
           {
-            "group": "Examples",
+            "group": "Concepts",
             "pages": [
-              "examples/basic-scenarios",
-              "examples/advanced-scenarios"
+              "concepts/project-structure",
+              "concepts/architecture",
+              "concepts/hippopotamus-optimization",
+              "concepts/app-java",
+              "concepts/cloudsim-plus"
             ]
           },
           {
-            "group": "Configuration",
+            "group": "Reference",
             "pages": [
-              "configuration/config-properties",
-              "configuration/algorithm-parameters",
-              "configuration/logback"
-            ]
-          },
-          {
-            "group": "Results and Analysis",
-            "pages": [
-              "results-and-analysis/key-output-files"
-            ]
-          },
-          {
-            "group": "Testing",
-            "pages": [
-              "testing/unit-tests",
-              "testing/running-tests"
-            ]
-          },
-          {
-            "group": "Development",
-            "pages": [
-              "development/contributing",
-              "development/building-from-source"
+              "reference/config-properties",
+              "reference/algorithm-parameters",
+              "reference/logback",
+              "reference/key-output-files"
             ]
           }
         ]
